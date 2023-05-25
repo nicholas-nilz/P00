@@ -135,7 +135,7 @@ public class CalculatorTest {
 		int expected = 1368;
 		assertEquals (expected, actual);
 	}
-	
+	//Test for TestADDError (nicholas)
 	@Test
 	public void testADDError() {
 		int a = 400;
@@ -148,6 +148,7 @@ public class CalculatorTest {
 		int unexpected = 1500;
 		assertEquals (unexpected, actual);
 	}
+	
 	
 
 	

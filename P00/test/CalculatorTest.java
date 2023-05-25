@@ -122,6 +122,33 @@ public class CalculatorTest {
 		assertEquals (expected, actual, 0.0);
 	}
 	
+	@Test
+	public void testADD() {
+//		fail("Not yet implemented");
+		int a = 123;
+		int b = 456;
+		int c = 789;
+		
+		Calculator cal = new Calculator();
+		int actual = cal.add(a, b, c);
+		
+		int expected = 1368;
+		assertEquals (expected, actual);
+	}
+	
+	@Test
+	public void testADDError() {
+		int a = 400;
+		int b = 500;
+		int c = 600;
+		
+		Calculator cal = new Calculator();
+		int actual = cal.add(a, b, c);
+		
+		int unexpected = 1500;
+		assertEquals (unexpected, actual);
+	}
+	
 
 	
 }

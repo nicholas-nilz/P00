@@ -38,6 +38,18 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testAddError() {
+		int a = 400;
+		int b = 500;
+		
+		Calculator cal = new Calculator();
+		int actual = cal.add(a, b);
+		
+		int unexpected = 900;
+		assertEquals (unexpected, actual);
+	}
+	
+	@Test
 	public void testSubtract() {
 		int a = 9876;
 		int b = 4321;
@@ -47,6 +59,18 @@ public class CalculatorTest {
 		
 		int expected = 5555;
 		assertEquals(actual, expected);
+	}
+	
+	@Test
+	public void testSubtractError() {
+		int a = 400;
+		int b = 500;
+		
+		Calculator cal = new Calculator();
+		int actual = cal.subtract(a, b);
+		
+		int unexpected = -100;
+		assertEquals (unexpected, actual);
 	}
 	
 	@Test
@@ -60,6 +84,19 @@ public class CalculatorTest {
 		int expected = 20;
 		assertEquals (expected, actual);
 	}
+	
+	@Test
+	public void testMultiplyError() {
+		int a = 400;
+		int b = 500;
+		
+		Calculator cal = new Calculator();
+		int actual = cal.multiply(a, b);
+		
+		int unexpected = 200000;
+		assertEquals (unexpected, actual);
+	}
+	
 	
 	@Test
 	public void testDivide() {
@@ -79,7 +116,10 @@ public class CalculatorTest {
 		int b = 0;
 		
 		Calculator cal = new Calculator();
-		cal.divide(a, b);
+		double actual = cal.divide(a, b);
+		
+		double expected= Double.POSITIVE_INFINITY;
+		assertEquals (expected, actual, 0.0);
 	}
 	
 
